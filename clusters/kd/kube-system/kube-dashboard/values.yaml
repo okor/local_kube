@@ -1,0 +1,15 @@
+ingress:
+  enabled: true
+  path: /
+  hosts: ['dashboard.kube.local']
+  annotations:
+    kubernetes.io/ingress.class: traefik
+extraArgs:
+  - --enable-insecure-login
+  - --insecure-port=80
+rbac:
+  clusterAdminRole: kubernetes-dashboard-minimal
+  create: false
+serviceAccount:
+  create: false
+  name: kubernetes-dashboard

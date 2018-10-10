@@ -1,0 +1,7 @@
+dashboard:
+  enabled: true
+  domain: traefik.kube.local
+ssl:
+  enabled: true
+  insecureSkipVerify: true
+  upstream: true

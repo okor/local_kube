@@ -1,0 +1,5 @@
+https://github.com/helm/charts/blob/master/stable/grafana/README.md
+
+To get user/pw, run:
+  kubectl get secrets -n kube-system grafana -o jsonpath="{.data.admin-user}" | base64 --decode ; echo
+  kubectl get secrets -n kube-system grafana -o jsonpath="{.data.admin-password}" | base64 --decode ; echo
